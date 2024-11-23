@@ -14,4 +14,9 @@ router.post("/register", registerUser);
 //user login
 // router.post("/login", loginUser);
 
+// router to homepage
+router.get("/", (req, res) => {
+    res.send("Welcome to the homepage");
+    });
+
 module.exports = router;
