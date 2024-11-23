@@ -1,22 +1,14 @@
-// import
 const express = require("express");
 const router = express.Router();
 
-const { registerUser } = require("../controllers/authController");
-// user login
+const { registerUser, loginUser } = require("../controllers/authController");
 
-// for middleware validation
-// const { validateRegister } = require("../middleware/validation");
-
-/// user register
 router.post("/register", registerUser);
 
-//user login
-// router.post("/login", loginUser);
+router.post("/login", loginUser);
 
-// router to homepage
 router.get("/", (req, res) => {
     res.send("Welcome to the homepage");
-    });
+});
 
 module.exports = router;
